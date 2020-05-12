@@ -1,0 +1,8 @@
+<ul class="flex">
+  <li *ngFor="let kitty of kittyData$">
+    <div class="catContainer">
+      <h2>ID: {{ kitty.id }}</h2>
+      <img src="{{ kitty.url }}" />
+    </div>
+  </li>
+</ul>

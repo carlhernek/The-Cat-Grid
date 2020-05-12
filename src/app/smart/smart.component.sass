@@ -1,0 +1,33 @@
+img
+    height: 150px
+    width: 150px
+    object-fit: cover
+    margin: 10px
+
+li
+    list-style: none
+
+.flex
+    display: flex
+    width: 80vw
+    flex-flow: row wrap
+
+.catContainer
+    position: relative
+    display: flex
+    justify-content: center
+
+    h2
+        position: absolute
+        opacity: 0
+        text-align: center
+        align-self: center
+        font-size: 30pt
+        overflow-wrap: anywhere
+
+.catContainer:hover
+    img
+        opacity: 0.2
+
+    h2 
+        opacity: 1
