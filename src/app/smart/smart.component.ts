@@ -13,7 +13,7 @@ export class SmartComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getKitty().subscribe((data) => {
-      this.kittyData$ = data; // Ask yngling about what arguments you can pass here?
+      this.kittyData$ = data as any; // Ask yngling about what arguments you can pass here?
       console.log(this.kittyData$);
     });
   }
