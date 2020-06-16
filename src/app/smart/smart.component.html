@@ -6,7 +6,6 @@
     [cdkDropListData]="kittyArrayOne"
     [cdkDropListConnectedTo]="[kittyListTwo]"
     (cdkDropListDropped)="drop($event)"
-    cdkDrag
   >
     <li *ngFor="let kitty of kittyArrayOne" cdkDrag>
       <div class="catContainer-placeholder" *cdkDragPlaceholder></div>
@@ -22,7 +21,6 @@
     [cdkDropListData]="kittyArrayTwo"
     [cdkDropListConnectedTo]="[kittyListOne]"
     (cdkDropListDropped)="drop($event)"
-    cdkDrag
   >
     <li *ngFor="let kitty of kittyArrayTwo" cdkDrag>
       <div class="catContainer-placeholder" *cdkDragPlaceholder></div>

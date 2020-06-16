@@ -35,8 +35,6 @@ export class SmartComponent implements OnInit {
       }
       i++;
     });
-    console.log(this.kittyArrayOne);
-    console.log(this.kittyArrayTwo);
   }
 
   drop(event: CdkDragDrop<string[]>) {
