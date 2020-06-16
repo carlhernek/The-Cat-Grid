@@ -8,7 +8,7 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {}
   public getKitty() {
     return this.httpClient.get(
-      `https://api.thecatapi.com/v1/images/search?limit=49`
+      `https://api.thecatapi.com/v1/images/search?limit=20`
     );
   }
 }

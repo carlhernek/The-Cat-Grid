@@ -1,8 +1,34 @@
-<ul class="flex">
-  <li *ngFor="let kitty of kittyData$">
-    <a class="catContainer" target="_blank" href="{{ kitty.url }}">
-      <h2>ID: {{ kitty.id }}</h2>
-      <img src="{{ kitty.url }}" />
-    </a>
-  </li>
-</ul>
+<div class="wrapper">
+  <ul
+    class="flex"
+    cdkDropList
+    #kittyListOne="cdkDropList"
+    [cdkDropListData]="kittyArrayOne"
+    [cdkDropListConnectedTo]="[kittyListTwo]"
+    (cdkDropListDropped)="drop($event)"
+    cdkDrag
+  >
+    <li *ngFor="let kitty of kittyArrayOne" cdkDrag>
+      <div class="catContainer-placeholder" *cdkDragPlaceholder></div>
+      <div class="catContainer">
+        <img src="{{ kitty.url }}" />
+      </div>
+    </li>
+  </ul>
+  <ul
+    class="flex"
+    cdkDropList
+    #kittyListTwo="cdkDropList"
+    [cdkDropListData]="kittyArrayTwo"
+    [cdkDropListConnectedTo]="[kittyListOne]"
+    (cdkDropListDropped)="drop($event)"
+    cdkDrag
+  >
+    <li *ngFor="let kitty of kittyArrayTwo" cdkDrag>
+      <div class="catContainer-placeholder" *cdkDragPlaceholder></div>
+      <div class="catContainer">
+        <img src="{{ kitty.url }}" />
+      </div>
+    </li>
+  </ul>
+</div>
